@@ -26,7 +26,7 @@ function wishMe() {
 
 // Quando a página é carregada, inicializa o assistente virtual JARVIS
 window.addEventListener('load', () => {
-    speak("Inicializando JARVIS...");
+    speak("Inicializando DEV...");
     wishMe();
 });
 
@@ -56,7 +56,10 @@ function takeCommand(message) {
     } else if (message.includes("mostre o lindo")) {
         window.open("https://www.instagram.com/carlos.gabriiel/", "_blank");
         speak("Abrindo o seu instagram, carlos gabriel");
-    } else if (message.includes("abrir youtube")) {
+    }else if (message.includes("despesa")) {
+        window.open("https://aibfinance.com.br", "_blank");
+        speak("Abrindo o gerenciador financeiro");
+     } else if (message.includes("abrir youtube")) {
         window.open("https://youtube.com", "_blank");
         speak("Abrindo Youtube...");
     } else if (message.includes("abrir o facebook")) {
