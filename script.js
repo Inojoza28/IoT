@@ -23,11 +23,11 @@ function wishMe() {
     var hour = day.getHours();
 
     if (hour >= 0 && hour < 12) {
-        speak("Bom dia, chefe...");
+        speak("Bom dia...");
     } else if (hour >= 12 && hour < 17) {
-        speak("Boa tarde, mestre...");
+        speak("Boa tarde...");
     } else {
-        speak("Boa noite, mestre...");
+        speak("Boa noite...");
     }
 }
 
