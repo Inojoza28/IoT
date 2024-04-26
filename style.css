@@ -10,7 +10,7 @@
     min-height: 100vh;
     position: relative;
     width: 100%;
-    background: #000;
+    background-image: linear-gradient(25deg, #863ddc, #786ae4, #5f8fec, #1db1f3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,14 +34,14 @@
 }
 
 .main .image-container h1 {
-    color: #d44e00;
+    color: #ff9883;
     text-align: center;
     margin-bottom: 10px;
     font-size: 40px;
 }
 
 .main .image-container p {
-    color: #cacaca;
+    color: #cccccc;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -52,7 +52,7 @@
     width: 30vw;
     height: 50px;
     border-radius: 20px;
-    background: rgba(169, 41, 5, 0.841);
+    background: #ff5e3de0;
 }
 
 .main .input .talk {
@@ -70,66 +70,46 @@
 
 .main .input .talk i {
     font-size: 20px;
-    color: #aed0d0;
+    color: #e9f7f7;
 }
 
 .main .input .content {
-    color: #aed0d0;
+    color: #efefef;
     font-size: 15px;
     margin-right: 20px;
 }
 
 
-/* Adicione suas regras de estilo existentes aqui */
-
-/* Media Queries para telas de tamanho médio */
-@media screen and (max-width: 768px) {
-    .main .image-container h1 {
-        font-size: 30px;
-    }
-    .main .image-container p {
-        font-size: 18px;
-    }
-    .main .input {
-        width: 80vw;
-        height: 60px;
-    }
-    .main .input .talk {
-        width: 15%;
-        max-width: 40px;
-        font-size: 14px;
-    }
-    .main .input .talk i {
-        font-size: 18px;
-    }
-    .main .input .content {
-        font-size: 14px;
-        margin-right: 10px;
-    }
+.commands {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.177);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries para telas pequenas (como smartphones) */
-@media screen and (max-width: 480px) {
-    .main .image-container h1 {
-        font-size: 24px;
+.commands h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.commands ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.commands li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .commands {
+        display: none;
     }
-    .main .image-container p {
-        font-size: 16px;
-    }
-    .main .input {
-        width: 90vw;
-        height: 50px;
-    }
-    .main .input .talk {
-        width: 20%;
-        max-width: 30px;
-        font-size: 12px;
-    }
-    .main .input .talk i {
-        font-size: 16px;
-    }
-    .main .input .content {
-        font-size: 12px;
-        margin-right: 8px;
+    .main{
+        display: none;
     }
 }

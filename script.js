@@ -64,7 +64,7 @@ function takeCommand(message) {
         window.open("https://www.instagram.com/carlos.gabriiel/", "_blank");
         speak("Agora chefe...aqui está");
     } else if (message.includes("meu portal")) {
-        window.open("https://fs-educ.sempreser.com.br/adfs/ls/", "_blank");
+        window.open("https://aluno.sereduc.com/", "_blank");
         speak("Aqui está o seu portal do aluno");
     }else if (message.includes("tô gastando muito")) {
         window.open("https://aibfinance.com.br", "_blank");
