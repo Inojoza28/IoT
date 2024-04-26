@@ -29,19 +29,19 @@
 }
 
 .main .image-container .image img {
-    width: 350px;
+    width: 300px;
     align-items: center;
 }
 
 .main .image-container h1 {
-    color: #00bcd4;
+    color: #d44e00;
     text-align: center;
     margin-bottom: 10px;
     font-size: 40px;
 }
 
 .main .image-container p {
-    color: #324042;
+    color: #cacaca;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -49,10 +49,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40vw;
+    width: 30vw;
     height: 50px;
     border-radius: 20px;
-    background: rgb(202 253 255 / 50%);
+    background: rgba(169, 41, 5, 0.841);
 }
 
 .main .input .talk {
@@ -80,64 +80,56 @@
 }
 
 
-.beautiful-button {
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
-   /* Gradient background */
-    color: white;
-   /* White text color */
-    font-family: "Segoe UI", sans-serif;
-   /* Stylish and legible font */
-    font-weight: bold;
-    font-size: 18px;
-   /* Large font size */
-    border: none;
-   /* No border */
-    border-radius: 30px;
-   /* Rounded corners */
-    padding: 14px 28px;
-   /* Large padding */
-    cursor: pointer;
-   /* Cursor on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-   /* Subtle shadow */
-    animation: button-shimmer 2s infinite;
-    transition: all 0.3s ease-in-out;
-   /* Smooth transition */
-  }
-  
-  /* Hover animation */
-  .beautiful-button:hover {
-    background: linear-gradient(to bottom, #2c2f63, #5b67b7);
-    animation: button-particles 1s ease-in-out infinite;
-    transform: translateY(-2px);
-  }
-  
-  /* Click animation */
-  .beautiful-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Shimmer animation */
-  @keyframes button-shimmer {
-    0% {
-      background-position: left top;
+/* Adicione suas regras de estilo existentes aqui */
+
+/* Media Queries para telas de tamanho médio */
+@media screen and (max-width: 768px) {
+    .main .image-container h1 {
+        font-size: 30px;
     }
-  
-    100% {
-      background-position: right bottom;
+    .main .image-container p {
+        font-size: 18px;
     }
-  }
-  
-  /* Particle animation */
-  @keyframes button-particles {
-    0% {
-      background-position: left top;
+    .main .input {
+        width: 80vw;
+        height: 60px;
     }
-  
-    100% {
-      background-position: right bottom;
+    .main .input .talk {
+        width: 15%;
+        max-width: 40px;
+        font-size: 14px;
     }
-  }
+    .main .input .talk i {
+        font-size: 18px;
+    }
+    .main .input .content {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+}
+
+/* Media Queries para telas pequenas (como smartphones) */
+@media screen and (max-width: 480px) {
+    .main .image-container h1 {
+        font-size: 24px;
+    }
+    .main .image-container p {
+        font-size: 16px;
+    }
+    .main .input {
+        width: 90vw;
+        height: 50px;
+    }
+    .main .input .talk {
+        width: 20%;
+        max-width: 30px;
+        font-size: 12px;
+    }
+    .main .input .talk i {
+        font-size: 16px;
+    }
+    .main .input .content {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+}
