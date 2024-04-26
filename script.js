@@ -109,7 +109,7 @@ function takeCommand(message) {
         speak("Foi um prazer, Até logo!");
         setTimeout(() => {
             window.close(); // Fecha a aba
-        }, 4000); // Fecha a aba após 2 segundos (ajuste conforme necessário)
+        }, 4000); // Fecha a aba após 4 segundos
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "Pesquisando sobre " + message + " no Google";
