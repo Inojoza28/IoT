@@ -10,7 +10,7 @@
     min-height: 100vh;
     position: relative;
     width: 100%;
-    background-image: linear-gradient(25deg, #863ddc, #786ae4, #5f8fec, #1db1f3);
+    background-image: linear-gradient(25deg, #1f1782, #3d578e, #3f9498, #00d49f);
     display: flex;
     flex-direction: column;
     align-items: center;
