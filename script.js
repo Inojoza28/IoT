@@ -55,8 +55,8 @@ btn.addEventListener('click', () => {
 });
 
 function takeCommand(message) {
-    if (message.includes('hey') || message.includes('hello')) {
-        speak("Opa carlos, como posso ajudar?");
+    if (message.includes('dev') || message.includes('hello')) {
+        speak("Fala irmão, como posso ajudar?");
     } else if (message.includes("abrir google")) {
         window.open("https://google.com", "_blank");
         speak("Abrindo o Google...");
@@ -110,14 +110,6 @@ function takeCommand(message) {
         setTimeout(() => {
             window.close(); // Fecha a aba
         }, 4000); // Fecha a aba após 2 segundos (ajuste conforme necessário)
-    } else if (message.includes("fechar tudo")) {
-        speak("Fechando todas as abas.");
-        setTimeout(() => {
-            const windows = window.open('', '_blank');
-            while (windows) {
-                windows.close(); // Fecha a aba
-            }
-        }, 4000); // Fecha as abas após 2 segundos (ajuste conforme necessário)
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "Pesquisando sobre " + message + " no Google";
