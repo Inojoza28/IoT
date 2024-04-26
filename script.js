@@ -27,13 +27,13 @@ function wishMe() {
     } else if (hour >= 12 && hour < 17) {
         speak("Boa tarde, mestre...");
     } else {
-        speak("Boa noite, senhor...");
+        speak("Boa noite, mestre...");
     }
 }
 
 // Quando a página é carregada, inicializa o assistente virtual DEV
 window.addEventListener('load', () => {
-    speak("Inicializando DEV...");
+    speak("Inicializando o sistema...");
     wishMe();
 });
 
