@@ -65,6 +65,12 @@ function takeCommand(message) {
      } else if (message.includes("abrir youtube")) {
         window.open("https://youtube.com", "_blank");
         speak("Abrindo Youtube...");
+    } else if (message.includes("abrir github")) {
+        window.open("https://github.com/", "_blank");
+        speak("Abrindo Github...");
+    } else if (message.includes("abrir chat")) {
+        window.open("https://chat.openai.com/", "_blank");
+        speak("Abrindo o ChatGpt...");
     } else if (message.includes("abrir o facebook")) {
         window.open("https://facebook.com", "_blank");
         speak("Abrindo o Facebook...");
