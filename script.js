@@ -53,9 +53,12 @@ function takeCommand(message) {
     } else if (message.includes("abrir google")) {
         window.open("https://google.com", "_blank");
         speak("Abrindo o Google...");
-    } else if (message.includes("oitava maravilha do mundo")) {
+    } else if (message.includes("abrir instagram")) {
         window.open("https://www.instagram.com/carlos.gabriiel/", "_blank");
         speak("Agora chefe...aqui está");
+    } else if (message.includes("meu portal")) {
+        window.open("https://fs-educ.sempreser.com.br/adfs/ls/", "_blank");
+        speak("Aqui está o seu portal do aluno");
     }else if (message.includes("tô gastando muito")) {
         window.open("https://aibfinance.com.br", "_blank");
         speak("Abrindo o gerenciador financeiro");
@@ -85,6 +88,12 @@ function takeCommand(message) {
         window.open('Calculator:///');
         const finalText = "Abrindo a calculadora";
         speak(finalText);
+     } else if (message.includes('código') || message.includes('Visual Studio Code')) {
+        window.location.href = 'vscode://';
+        const finalText = "Abrindo o Visual Studio";
+        speak(finalText);
+        
+        
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "Pesquisando sobre " + message + " no Google";
