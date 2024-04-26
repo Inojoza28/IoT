@@ -4,6 +4,13 @@ const content = document.querySelector('.content');
 function speak(text) {
     const text_speak = new SpeechSynthesisUtterance(text);
 
+    // Obter lista de vozes disponíveis
+    const voices = window.speechSynthesis.getVoices();
+
+    // Selecionar a voz desejada - neste caso, a voz em português
+    const voice = voices.find(voice => voice.lang === 'pt-BR');
+    text_speak.voice = voice;
+
     text_speak.rate = 1;
     text_speak.volume = 1;
     text_speak.pitch = 1;
@@ -98,7 +105,11 @@ function takeCommand(message) {
         window.location.href = 'vscode://';
         const finalText = "Abrindo o Visual Studio";
         speak(finalText);
-        
+    } else if (message.includes("obrigado por hoje")) {
+        speak("Foi um prazer, Até logo!");
+        setTimeout(() => {
+            window.close(); // Fecha a aba
+        }, 4000); // Fecha a aba após 2 segundos (ajuste conforme necessário)
         
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
