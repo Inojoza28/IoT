@@ -61,8 +61,8 @@ function takeCommand(message) {
         window.open("https://google.com", "_blank");
         speak("Abrindo o Google...");
     } else if (message.includes("abrir instagram")) {
-        window.open("https://www.instagram.com/carlos.gabriiel/", "_blank");
-        speak("Agora chefe...aqui está");
+        window.open("https://www.instagram.com/", "_blank");
+        speak("Abrindo o instagram");
     } else if (message.includes("meu portal")) {
         window.open("https://aluno.sereduc.com/", "_blank");
         speak("Aqui está o seu portal do aluno");
@@ -81,6 +81,9 @@ function takeCommand(message) {
     } else if (message.includes("abrir o facebook")) {
         window.open("https://facebook.com", "_blank");
         speak("Abrindo o Facebook...");
+    } else if (message.includes("bloco de notas")) {
+        window.open("https://pt.anotepad.com/", "_blank");
+        speak("Abrindo o bloco de notas...");
     } else if (message.includes('o que é') || message.includes('quem é') || message.includes('o que são')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "Aqui está o que eu encontrei na internet sobre " + message;
