@@ -81,6 +81,12 @@ function takeCommand(message) {
     } else if (message.includes("abrir o facebook")) {
         window.open("https://facebook.com", "_blank");
         speak("Abrindo o Facebook...");
+    } else if (message.includes("meus projetos")) {
+        window.open("https://inojoza28.github.io/CG/", "_blank");
+        speak("Ok...");
+    } else if (message.includes("abrir gmail")) {
+        window.open("https://gmail.com", "_blank");
+        speak("Ok...");
     } else if (message.includes("bloco de notas")) {
         window.open("https://pt.anotepad.com/", "_blank");
         speak("Abrindo o bloco de notas...");
