@@ -56,7 +56,7 @@ btn.addEventListener('click', () => {
 
 function takeCommand(message) {
     if (message.includes('dev') || message.includes('hello')) {
-        speak("Fala irmão, como posso ajudar?");
+        speak("Olá patrão, como posso ajudar?");
     } else if (message.includes("abrir google")) {
         window.open("https://google.com", "_blank");
         speak("Abrindo o Google...");
@@ -138,3 +138,22 @@ function takeCommand(message) {
     }
 }
 
+// Botão da lista de comandos
+
+function toggleCommands() {
+    var commandsList = document.getElementById("commandsList");
+    var arrow = document.getElementById("arrow");
+    if (commandsList.style.display === "none") {
+        commandsList.style.display = "block";
+        arrow.innerHTML = "&#9650;"; // Mudando para cima
+        scrollToCommands();
+    } else {
+        commandsList.style.display = "none";
+        arrow.innerHTML = "&#9660;"; // Mudando para baixo
+    }
+}
+
+function scrollToCommands() {
+    var commandsDiv = document.querySelector('.commands');
+    commandsDiv.scrollIntoView({ behavior: 'smooth' });
+}

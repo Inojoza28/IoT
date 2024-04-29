@@ -86,7 +86,7 @@
     left: 10px;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.177);
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -94,6 +94,9 @@
 .commands h2 {
     margin-top: 0;
     margin-bottom: 10px;
+    font-size: 21px;
+    cursor: pointer;
+    color: #111111f4;
 }
 
 .commands ul {
@@ -112,4 +115,17 @@
     .main{
         display: none;
     }
+}
+
+
+#arrow {
+    transform: translateY(-50%);
+    color: #111111bd;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 22px;
+}
+
+#commandsList {
+    display: none;
 }
