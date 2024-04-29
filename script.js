@@ -66,10 +66,10 @@ function takeCommand(message) {
     } else if (message.includes("meu portal")) {
         window.open("https://aluno.sereduc.com/", "_blank");
         speak("Aqui está o seu portal do aluno");
-    }else if (message.includes("tô gastando muito")) {
+    } else if (message.includes("tô gastando muito")) {
         window.open("https://aibfinance.com.br", "_blank");
         speak("Abrindo o gerenciador financeiro");
-     } else if (message.includes("abrir youtube")) {
+    } else if (message.includes("abrir youtube")) {
         window.open("https://youtube.com", "_blank");
         speak("Abrindo Youtube...");
     } else if (message.includes("abrir github")) {
@@ -110,7 +110,7 @@ function takeCommand(message) {
         window.open('Calculator:///');
         const finalText = "Abrindo a calculadora";
         speak(finalText);
-     } else if (message.includes('código') || message.includes('Visual Studio Code')) {
+    } else if (message.includes('código') || message.includes('Visual Studio Code')) {
         window.location.href = 'vscode://';
         const finalText = "Abrindo o Visual Studio";
         speak(finalText);
@@ -119,9 +119,22 @@ function takeCommand(message) {
         setTimeout(() => {
             window.close(); // Fecha a aba
         }, 4000); // Fecha a aba após 4 segundos
+    } else if (message.includes("me fale uma coisa boa") || message.includes('me diga uma coisa legal')) {
+        const goodThings = [
+            "Você é incrível!",
+            "Você faz a diferença na vida de muitas pessoas!",
+            "Você tem um coração bondoso e generoso!",
+            "Você é capaz de superar qualquer desafio que apareça em seu caminho!",
+            "Você merece todo o sucesso e felicidade do mundo!",
+            "Lembre-se sempre: você é mais forte do que pensa e mais corajoso do que imagina!",
+            "Não desista! Você é capaz de alcançar qualquer coisa, apenas se não desistir!"
+        ];
+        const randomGoodThing = goodThings[Math.floor(Math.random() * goodThings.length)];
+        speak(randomGoodThing);
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "Pesquisando sobre " + message + " no Google";
         speak(finalText);
     }
 }
+
