@@ -60,6 +60,9 @@ function takeCommand(message) {
     } else if (message.includes("abrir google")) {
         window.open("https://google.com", "_blank");
         speak("Abrindo o Google...");
+    } else if (message.includes("feliz dia das mães")) {
+        window.open("https://inojoza28.github.io/mae/", "_blank");
+        speak("...");
     } else if (message.includes("abrir instagram")) {
         window.open("https://www.instagram.com/", "_blank");
         speak("Abrindo o instagram");
